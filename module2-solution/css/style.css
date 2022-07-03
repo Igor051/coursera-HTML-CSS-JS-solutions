@@ -1,0 +1,95 @@
+body {
+    font-family: Arima;
+}
+
+h1 {
+    text-align: center;
+    margin: 21px 0 40px 0;
+}
+
+#chicken-title-region {
+    background-color: lightpink;
+}
+
+#beef-title-region {
+    background-color: red;
+    color: white;
+}
+
+#sushi-title-region {
+    background-color: rgba(231, 252, 136, 0.92);
+}
+
+#chicken-section {
+    grid-area: c;
+}
+
+#beef-section {
+    grid-area: b;
+}
+
+#sushi-section {
+    grid-area: s;
+}
+
+#sections-container {
+    width: 100%;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-areas: "c b s";
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+    padding-right: 32px;
+    padding-left: 32px;
+    margin-bottom: 50px;
+}
+
+#sections-container section {
+    width: 100%;
+    border: 1px solid black;
+    background-color: rgba(119, 115, 115, 0.92);
+    position: relative;
+    padding: 35px 12px 0 12px;
+    box-sizing: border-box;
+}
+
+#sections-container section > h3 {
+    border: 1px solid black;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 150px;
+    margin: 0;
+    text-align: center;
+}
+
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    #sections-container {
+        grid-template-areas: "c b"
+                             "s s";
+
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        padding-right: 12px;
+        padding-left: 12px;
+    }
+
+    h1 {
+        margin: 21px 0 21px 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    #sections-container {
+        grid-template-areas: "c"
+                             "b"
+                             "s";
+        grid-row-gap: 20px;
+        margin-bottom: 28px;
+    }
+
+    h1 {
+        margin: 21px 0 11px 0;
+    }
+}
